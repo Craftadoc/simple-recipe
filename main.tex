@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% we use paracol to display breakable two columns
+\usepackage{paracol}
+% define page styles using geometry
+\usepackage[a4paper]{geometry}
+
+% remove all possible margins
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+
+% indentation is zero
+\setlength{\parindent}{0mm}
+
+% include the fontawesome icon set
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\usepackage{ragged2e}
+%----------------------------------------------------------------------------------------
+%	FONT BASICS
+%----------------------------------------------------------------------------------------
+
+% some tex-live fonts - choose your own
+
+\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+% \usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto} 
+
+% set font default
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+%----------------------------------------------------------------------------------------
+%	TABLE /ARRAY DEFINITIONS
+
+% extended aligning of tabular cells
+\usepackage{array}
+
+% custom column right-align with fixed width
+% use like p{size} but via x{size}
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+\usepackage{xcolor}
+% light color
+\definecolor{darkcol}{HTML}
+{A4330D} %<{"type": "color", "description": "Choose your own color (optional)", "initialColor": "A4330D"}>
+
+\usepackage{fancyhdr}
+
+\renewcommand*\headrulewidth{0pt}
+\newcommand{\sidebarsection}[1]{
+    \large\textcolor{darkcol}{\textbf{#1}}
+}
+\newcommand{\recipesection}[1]{
+    \LARGE\textcolor{darkcol}{\textbf{#1}}
+}
+\newcommand{\preparationitem}[1]{
+    \normalsize\item{#1}
+}
+\newcommand{\recipetext}[1]{
+    \textcolor{darkcol}{#1}
+}
+\newcommand{\ingredientitem}[1]{
+    \vspace{3pt}
+    \normalsize\emph{#1}
+    \vspace{3pt}
+}
+\begin{document}
+\pagenumbering{gobble}
+\columnratio{0.76}
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+\colseprulecolor{darkcol}
+\begin{paracol}{2}
+\begin{leftcolumn}
+
+\begin{center}
+\includegraphics[width=\linewidth]{frietstoofvlees.jpg}%<{"description": "Picture of your dish", "type": "crop", "aspect": 2}>
+\end{center}
+\recipesection{Recipe title} %<{"description": "Recipe title", "type": "text"}>
+\vspace{0pt}
+\\
+\textcolor{darkcol}{\normalsize\faClockO\recipetext
+{3 hours} %<{"description": "How long does it take to prepare the meal?", "type": "text"}>
+}
+\textcolor{darkcol}{\normalsize\faUser\recipetext
+{4 serves} %<{"description": "How many serves?", "type": "text"}>
+}
+\textcolor{darkcol}{\normalsize\faNewspaperO\recipetext
+{Some website} %<{"description": "Source of recipe", "type": "text"}>
+}
+\vspace{5pt}
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+    %<{"description": "List of steps to prepare the meal", "type": "list"}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.} %<{"description": "Step", "type": "textblock"}>
+        
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsu sed do eiusmoLorem ipsum dolor siteiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
+        \preparationitem{ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit r sit amet, consectetur adipiscing elit, sed do eiusmo}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum doltur adipiscing elit, sed do eiusmo.}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo!}
+    %>
+
+\end{enumerate}
+\end{leftcolumn}
+
+\begin{rightcolumn}
+
+\sidebarsection{Ingredients} \\ \\
+%<{"description": "List of ingredients", "type": "list"}
+\ingredientitem{2 big onions}\\ %<{"description": "Ingredient", "type": "text"}>
+\ingredientitem{butter}\\
+\ingredientitem{1kg beef}\\
+\ingredientitem{pepper and salt}\\
+\ingredientitem{2 bottles of brown beer}\\
+\ingredientitem{2 branches tyme}\\
+\ingredientitem{2 table spoons of syrup}\\
+\ingredientitem{2 table spoons of mustard}\\
+\ingredientitem{natural vinegar}\\
+\ingredientitem{1kg (loosely cooked) potatoes for the fries}\\
+\ingredientitem{mayonaise}\\
+%>
+
+\end{rightcolumn}
+\clearpage
+\end{paracol}
+\end{document}
