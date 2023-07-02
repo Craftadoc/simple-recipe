@@ -49,7 +49,7 @@
 \usepackage{xcolor}
 % light color
 \definecolor{darkcol}{HTML}
-{A4330D} %<{"type": "color", "description": "Choose your own color (optional)", "initialColor": "A4330D"}>
+{A4330D}%<{type: "reference", id: "color"}>
 
 \usepackage{fancyhdr}
 
@@ -80,25 +80,27 @@
 \begin{paracol}{2}
 \begin{leftcolumn}
 
+%<{type: "group", description: "Recipe information"}
 \begin{center}
-\includegraphics[width=\linewidth]{frietstoofvlees.jpg}%<{"description": "Picture of your dish", "type": "crop", "aspect": 2}>
+\includegraphics[width=\linewidth]{frietstoofvlees.jpg}%<{description: "Picture", type: "crop", aspect: 2}>
 \end{center}
-\recipesection{Recipe title} %<{"description": "Recipe title", "type": "text"}>
+\recipesection{Recipe title} %<{description: "Recipe title", type: "text"}>
 \vspace{0pt}
 \\
 \textcolor{darkcol}{\normalsize\faClockO\recipetext
-{3 hours} %<{"description": "How long does it take to prepare the meal?", "type": "text"}>
+{3 hours} %<{description: "Preparation time", type: "text"}>
 }
 \textcolor{darkcol}{\normalsize\faUser\recipetext
-{4 serves} %<{"description": "How many serves?", "type": "text"}>
+{4 serves} %<{description: "Number of serves", type: "text"}>
 }
-\textcolor{darkcol}{\normalsize\faNewspaperO\recipetext
-{Some website} %<{"description": "Source of recipe", "type": "text"}>
+\textcolor{darkcol}{
+\normalsize\faNewspaperO\recipetext{Some website} %<{description: "Source of recipe (optional)", type: "text", deleteOnEmpty: true}>
 }
+%>
 \vspace{5pt}
 \begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
-    %<{"description": "List of steps to prepare the meal", "type": "list"}
-        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.} %<{"description": "Step", "type": "textblock", "injectBrackets": true}>
+    %<{description: "Preparation steps", type: "list", deleteOnEmpty: true}
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.} %<{description: "Step", type: "textblock", injectBrackets: true}>
         
         \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
         \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
@@ -121,8 +123,8 @@
 \begin{rightcolumn}
 
 \sidebarsection{Ingredients} \\ \\
-%<{"description": "List of ingredients", "type": "list"}
-\ingredientitem{2 big onions}\\ %<{"description": "Ingredient", "type": "text"}>
+%<{description: "Ingredient list", type: "list", deleteOnEmpty: true}
+\ingredientitem{2 big onions}\\ %<{description: "Ingredient", type: "text"}>
 \ingredientitem{butter}\\
 \ingredientitem{1kg beef}\\
 \ingredientitem{pepper and salt}\\
@@ -134,6 +136,13 @@
 \ingredientitem{1kg (loosely cooked) potatoes for the fries}\\
 \ingredientitem{mayonaise}\\
 %>
+
+\newcommand{\hide}[1]
+{}
+
+\hide{
+    %<{type: "color", description: "Choose your own color (optional)", initialColor: "A4330D", id: "color"}>
+}
 
 \end{rightcolumn}
 \clearpage
