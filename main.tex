@@ -82,25 +82,25 @@
 
 %<{type: "group", description: "Recipe information"}
 \begin{center}
-\includegraphics[width=\linewidth]{frietstoofvlees.jpg}%<{description: "Picture", type: "crop", aspect: 2}>
+\includegraphics[width=\linewidth]{frietstoofvlees.jpg}%<{description: "Picture", type: "crop", aspect: 2, inputValue: "frietstoofvlees.jpg"}>
 \end{center}
-\recipesection{Recipe title} %<{description: "Recipe title", type: "text"}>
+\recipesection{Recipe title} %<{description: "Recipe title", type: "text", inputValue: "Recipe title"}>
 \vspace{0pt}
 \\
 \textcolor{darkcol}{\normalsize\faClockO\recipetext
-{3 hours} %<{description: "Preparation time", type: "text"}>
+{3 hours} %<{description: "Preparation time", type: "text", inputValue: "3 hours"}>
 }
 \textcolor{darkcol}{\normalsize\faUser\recipetext
-{4 serves} %<{description: "Number of serves", type: "text"}>
+{4 serves} %<{description: "Number of serves", type: "text", inputValue: "4 serves"}>
 }
 \textcolor{darkcol}{
-\normalsize\faNewspaperO\recipetext{Some website} %<{description: "Source of recipe (optional)", type: "text", deleteOnEmpty: true}>
+\normalsize\faNewspaperO\recipetext{Some website} %<{description: "Source of recipe (optional)", type: "text", deleteOnEmpty: true, inputValue: "Some website"}>
 }
 %>
 \vspace{5pt}
 \begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
     %<{description: "Preparation steps", type: "list", deleteOnEmpty: true}
-        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.} %<{description: "Step", type: "textblock", injectBrackets: true}>
+        \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.} %<{description: "Step", type: "textblock", injectBrackets: true, inputValue: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo."}>
         
         \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
         \preparationitem{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.}
@@ -124,24 +124,24 @@
 
 \sidebarsection{Ingredients} \\ \\
 %<{description: "Ingredient list", type: "list", deleteOnEmpty: true}
-\ingredientitem{2 big onions}\\ %<{description: "Ingredient", type: "text"}>
-\ingredientitem{butter}\\
-\ingredientitem{1kg beef}\\
-\ingredientitem{pepper and salt}\\
-\ingredientitem{2 bottles of brown beer}\\
-\ingredientitem{2 branches tyme}\\
-\ingredientitem{2 table spoons of syrup}\\
-\ingredientitem{2 table spoons of mustard}\\
-\ingredientitem{natural vinegar}\\
-\ingredientitem{1kg (loosely cooked) potatoes for the fries}\\
-\ingredientitem{mayonaise}\\
+\ingredientitem{2 big onions}\\ %<{description: "Ingredient", type: "text", inputValue: "2 big onions"}>
+\ingredientitem{butter}\\ %<{description: "Ingredient", type: "text", inputValue: "butter"}>
+\ingredientitem{1kg beef}\\ %<{description: "Ingredient", type: "text", inputValue: "1kg beef"}>
+\ingredientitem{pepper and salt}\\ %<{description: "Ingredient", type: "text", inputValue: "pepper and salt"}>
+\ingredientitem{2 bottles of brown beer}\\ %<{description: "Ingredient", type: "text", inputValue: "2 bottles of brown beer"}>
+\ingredientitem{2 branches tyme}\\ %<{description: "Ingredient", type: "text", inputValue: "2 branches tyme"}>
+\ingredientitem{2 table spoons of syrup}\\ %<{description: "Ingredient", type: "text", inputValue: "2 table spoons of syrup"}>
+\ingredientitem{2 table spoons of mustard}\\ %<{description: "Ingredient", type: "text", inputValue: "2 table spoons of mustard"}>
+\ingredientitem{natural vinegar}\\ %<{description: "Ingredient", type: "text", inputValue: "natural vinegar"}>
+\ingredientitem{1kg (loosely cooked) potatoes for the fries}\\ %<{description: "Ingredient", type: "text", inputValue: "1kg (loosely cooked) potatoes for the fries"}>
+\ingredientitem{mayonaise}\\ %<{description: "Ingredient", type: "text", inputValue: "mayonaise"}>
 %>
 
 \newcommand{\hide}[1]
 {}
 
 \hide{
-    %<{type: "color", description: "Choose your own color (optional)", initialColor: "A4330D", id: "color"}>
+    %<{type: "color", description: "Accent color (optional)", initialColor: "A4330D", id: "color", inputValue: "A4330D"}>
 }
 
 \end{rightcolumn}
